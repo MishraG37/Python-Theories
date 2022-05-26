@@ -1,0 +1,567 @@
+================================================================================================================================================
+
+								Function
+
+================================================================================================================================================
+
+function is block of statement that perform the operations
+
+function is declared by 'def' keyword
+
+function name must have parenthesis and colon 
+
+function is reusable also
+
+function is called manually by developer
+
+function save time and space both for programmer to code again and again
+
+
+
+Syntax-
+==========
+
+
+def FunctionName(param1,param2..):
+
+	--------------------------
+	--------------------------
+	--------------------------
+	--------------------------
+	
+
+
+Ex-
+==========
+
+
+def add(a,b):
+	return a+b
+
+>>>add(10,20)	# 30
+
+
+================================================================================================================================================
+
+Parameter
+=========
+=========
+
+during defining the function we pass some values within function name , that is known as Parameter
+
+we can pass n number of parameters........
+
+
+Ex--
+
+def  name(Parameter):
+		-------------
+		-------------
+		-------------
+
+
+================================================================================================================================================
+
+Argument
+=========
+=========
+
+during calling a function we pass value of parameter which is known as Argument
+
+we can pass value only according to defined parameter
+
+
+Ex--
+
+def  name(Paramter):
+		-------------
+		-------------
+		-------------
+
+
+>>>name(Argument)
+
+
+===============================================================================================================================================
+
+						Program of Function include with Parameter and Argument
+					=========================================================================
+
+
+
+def sum(a,b):
+    return print(a+b)
+
+>>>sum(10,20)			#30
+
+
+================================================================================================================================================
+
+							Types of Arguments
+================================================================================================================================================
+
+
+1--Required Arguments
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+this is also known as Positional Argument
+
+if you passed agrument in function name and during calling not passing values according to parameters then this shows Positional Error 
+
+
+Ex--1
+
+
+def  add(a,b):
+
+	return a+b
+
+>>>add(10,20)		#30
+   
+
+
+
+
+Ex--2
+
+
+def  add(a,b):
+
+	return a+b
+
+>>>add()		#Positional Error
+   
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+2--Default Arguments
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+default arguments are defined with some default values 
+
+If in case, A user during calling the function has not provided the value, it takes the default value.
+
+
+Ex--1
+
+def employee(firstname,lastname="Smith"):
+    
+    return print(firstname,lastname)
+
+employee("Shubham")		# Shubham Smith
+
+
+
+
+Ex--2
+
+
+
+def employee(firstname,lastname="Smith"):
+    
+    return print(firstname,lastname)
+
+employee("Shubham","mishra")		# Shubham mishra
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+3--Keyword Arguments
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+this is defined with keyword and value as an arguments
+
+
+
+Ex--
+
+
+def  add(a=10,b=20):
+
+	return a+b
+
+>>>add()		#30
+
+
+There are some conditions which may arise
+
+1---
+
+def sum(a=10,b=20):
+    return print(a+b)
+
+>>>sum()		#30
+
+
+
+2--
+
+def sum(a=10,b=20):
+    return print(a+b)
+
+>>>sum(100)		#120 (i.e. Value of a is  taken as 100)
+
+
+3--
+
+def sum(a=10,b=20):
+    return print(a+b)
+
+>>sum(100, 8)		#108
+
+
+
+
+4--
+def sum(a=10,b=20):
+    return print(a+b)
+
+>>>sum(a=100)		#120
+
+
+
+
+
+5--
+
+def sum(a=10,b=20):
+    return print(a+b)
+
+>>sum(b=100)		#110
+
+
+
+
+
+	
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+4--Variable length Arguments
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+this is special feature to provide more arguments instead of defining limited number of parameters.
+
+
+this use a special symbol * before whom value you want to provide dynamically values
+
+its return type is tuple
+
+
+
+Ex--1
+
+
+def number(*a):
+    
+    return print("Numbers Are::",a)
+
+
+number(10)		# Numbers Are:: (10,)
+
+number(10,20)		# Numbers Are:: (10,20)
+
+number(10,20,30)	# Numbers Are:: (10,20,30)
+
+
+
+
+
+
+Ex--2
+
+
+def number(*a,character):
+    
+    return print("Numbers Are::",a,character)
+
+
+number(10,20,"a")		#Error character not defined 
+
+same Ex (With more details)
+def number(*a,character='ghfh'):
+    return print("Numbers Are::",a,character)
+number(10, 'fyg')               #Numbers Are:: (10, 'fyg') ghfh
+                       
+number(10,20)                   #Numbers Are:: (10, 20) ghfh
+
+
+
+Ex-3
+
+
+def number(*a,character):
+    
+    return print("Numbers Are::",a,character)
+
+
+number(10,20,"a")		#Numbers Are:: a (10, 20)  #TypeError: number() missing 1 required keyword-only argument: 'character'
+
+
+
+
+# How will we print the character ????                  ---------------------------------------------------------------->DOUBT
+
+
+
+
+
+================================================================================================================================================
+
+							Return Statement
+
+================================================================================================================================================
+
+
+this returns the value from function to the {Outside}object (which calls)
+
+it is done by the return keyword
+
+Ex-
+
+
+def  add(a,b):
+	return a+b
+
+add(10,20)		#30
+
+
+
+================================================================================================================================================
+
+								Variables in Function
+================================================================================================================================================
+
+There are two types of variable
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+1--global variable
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+this is defined outside the function body
+
+it may be called everywhere inside function and outside the function body also
+
+
+Ex--
+
+
+a=10
+b=20
+
+def add(a,b):
+    return print(a+b)
+
+add(a,b)		#30
+
+add(10,20)		#30
+
+add(40,50)		#90
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+2--local variable
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+this is defined inside the function body 
+
+it can be only called inside the function body, and not Outside the function body
+
+
+Ex-
+
+def add():
+	a=10
+	b=20
+	return print(a+b)
+
+add()		#30
+
+
+a  	#Error
+
+
+
+NOTE--
+
+if you want to make this local variable as global variable then python provide the global keyword
+
+
+
+
+def add():
+    global a,b
+    a=10
+    b=20
+    return print(a+b)
+
+add()                                #30
+print(a)                             #10
+print(b)                             #20
+
+
+
+NOTE-
+
+In python sometimes global and local variable might have same names. 
+
+But actually its not same , working processes are different to each other
+
+
+Ex--
+
+
+a=10
+b=20
+def add():    
+    a=100
+    b=200
+    return print(a+b)
+
+add()				#300
+
+print(a)			#10
+
+print(b)			#20
+
+
+
+
+In above example, this is giving the high priority to local variable(inside) then global variable(outside)
+
+
+===============================================================================================================================================
+
+									Symbol table
+===============================================================================================================================================
+
+
+symbol table is a data structure maintained by a compiler which contains all neccessary information about the program
+
+this symbol table basically includes variable name , methods , classes
+
+
+
+								Types of Symbol table
+================================================================================================================================================
+
+there are two types of symbol table
+
+
+1--local symbol table
+
+2--global symbol table
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+1--local symbol table
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+local symbol table stores all information related to local scope of programs
+
+In python, local symbol table is accessed by locals() method
+
+local scope could be within function , classes etc
+
+
+
+Syntax
+----------------------------------------------------------------------------------------------------------------------
+======================================================================================================================
+
+def add():
+    a=10
+    b=20
+    c=30
+    return print(locals())
+
+add()			# {'a': 10, 'b': 20, 'c': 30}
+
+
+Note--> locals() does not take any parameters
+
+
+
+
+Updating local variable by locals()
+=====================================================================================================================
+
+
+def add():
+    a=10
+    print("Before Changing::",a)
+    locals()['a']=100
+    print("After Changing::",a)
+
+add()		Before Changing:: 10
+		After  Changing:: 10	
+
+
+Note-->    locals() doesn't change anything inside functions
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+2--Global Symbol Table
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+global symbol table stores all information related to the global scope of the program
+
+In python global symbol table is accessed by globals() method
+
+global scope contain all information of variables, class , functions etc
+
+
+Syntax
+------------------------------------------------------------------------------------------------------------
+============================================================================================================
+
+
+a=10
+b=20
+
+print(globals())
+
+# {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None,
+'__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/doitwithshubh/hello.py', 'a': 10, 'b': 20}
+
+
+
+
+
+Updating global variable by globals()
+=====================================
+
+
+a=10
+
+print("Before Changing::",a)
+
+globals()['a']=100
+
+print("After Changing::",a)
+
+
+#Before Changing:: 10
+After Changing:: 100
+
+Bascially globals() change the global variable values
+
+Note--globals() doesn't take any parameters
+
