@@ -777,6 +777,15 @@ return True if String Have whitespace or False
 33--decode()  endcode()
 
 
+
+-----------------------------------------------------------------------------
+34-- swapcase()
+   
+
+The string swapcase() method converts all uppercase characters to lowercase and vice versa of the given string, and returns it.
+
+
+
 ================================================================================================================================================
 
 								3- List data type
